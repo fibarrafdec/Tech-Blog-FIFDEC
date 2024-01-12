@@ -1,0 +1,35 @@
+<section class="card m-2">
+    <header class="d-flex justify-content-between align-items-center p-2 bg-body-secondary">
+        <h3>{{singlePost.title}}</h3>
+        <p>Posted by {{singlePost.user.name}} on {{format_date singlePost.created_on}}</p>
+    </header>
+    <div class="card-body">{{singlePost.text}}</div>
+</section>
+<section>
+    <h5>Comments</h5>
+    {{#each singlePost.comments as |comment|}}
+    {{> comment-details}}
+    {{/each}}
+</section>
+ {{#if loggedIn }}
+<section class="card m-2">
+    <header class="d-flex justify-content-between align-items-center p-2 bg-body-secondary">
+        <h3></h3>
+        <p></p>
+    </header>
+    <form class="card-body comment-form">
+        <div class="mb-3">
+            <label for="comment" class="form-label">Comment</label>
+            <textarea class="form-control" name="comment" id="text" rows="5" data-post-id="{{id}}"></textarea>
+        </div>
+        <div class="d-grid mb-3">
+            <button type="button" class="btn btn-secondary">Submit</button>
+        </div>
+    </form>
+    
+</section>
+{{else}}
+    <h5>To leave a comment please login</h5>
+{{/if}}
+
+<script src="/js/comment.js"></script>
