@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-between align-items-center">
+    <div class="col-auto">
+        <h2>Welcome, {{user.name}}!</h2>
+    </div>
+    <button type="button" class="btn btn-outline-secondary" id="addNew">New Post</button>
+</div>
+<div class="new-post">
+    <section class="card m-2">
+    <header class="d-flex justify-content-between align-items-center p-2 bg-body-secondary">
+        <h3>New Blog</h3>
+        <p></p>
+    </header>
+    <form class="card-body blog-form">
+        <div class="mb-3">
+            <label for="title" class="form-label">Blog Title:</label>
+            <input class="form-control" name="title" id="title" data-post-id="{{user.id}}"></input>
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label">Blog Text:</label>
+            <textarea class="form-control" name="text" id="text" rows="20"></textarea>
+        </div>
+        <div class="d-grid mb-3">
+            <button type="button" class="btn btn-secondary mb-3" id="submit">Submit</button>
+        </div>
+    </form>
+</section>
+</div>
+
+<div class="post-list">
+    {{#each user.blogposts as |blogpost|}}
+    {{> blogpost-header}}
+    {{/each}}
+</div>
+
+<script src="/js/addBlog.js"></script>

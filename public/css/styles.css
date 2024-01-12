@@ -1,0 +1,87 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Added to include padding and border in the element's total width and height */
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Changed font for better readability */
+}
+
+.navbar-brand {
+  font-size: 2rem; /* Increased font size for better visibility */
+  font-weight: bold;
+  color: #333; /* Changed color for better contrast */
+}
+
+.nav-item {
+  font-size: 1.5rem;
+}
+
+.nav-link:hover {
+  color: #555; /* Changed color on hover for better interactivity */
+}
+
+.card a {
+  text-decoration: none;
+  color: #000; /* Changed color for better readability */
+}
+
+.post-list {
+  display: grid; /* Changed to grid for a cleaner layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Added gap for better separation */
+}
+
+.new-post {
+  display: none;
+}
+
+form {
+  width: 100%;
+  max-width: 500px; /* Added max-width for better form readability on larger screens */
+  margin: 0 auto; /* Centered the form horizontally */
+}
+
+form .form-group {
+  margin: 10px 0;
+}
+
+form .form-input,
+form .form-textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  font-size: 1rem;
+  border: 1px solid #ddd; /* Changed border color for better visibility */
+  border-radius: 5px;
+}
+
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form label,
+form .form-label {
+  display: block;
+  font-size: 1rem;
+  margin: 5px 0 2px 3px;
+  color: #555;
+}
+
+form .form-input {
+  color: #333;
+  background-color: #fff;
+}
+
+
